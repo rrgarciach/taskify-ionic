@@ -5,7 +5,7 @@
   const drakov = require('drakov');
 
   const argv = {
-    sourceFiles: './blueprints/**/**.md',
+    sourceFiles: './api-blueprints/**/**.md',
     serverPort: 3030,
     disableCORS: false,
     autoOptions: true,
