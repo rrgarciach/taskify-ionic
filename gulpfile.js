@@ -7,6 +7,8 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 
+require('./gulp/drakov');
+
 var paths = {
   sass: ['./scss/**/*.scss']
 };
@@ -48,4 +50,8 @@ gulp.task('git-check', function(done) {
     process.exit(1);
   }
   done();
+});
+
+gulp.task('default', () => {
+  gulp.run('mock-server');
 });
