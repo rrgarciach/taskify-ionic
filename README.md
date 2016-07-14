@@ -11,4 +11,7 @@ A TODO App developed with Ionic v1
 
 - Run API mock-server: `gulp`
 
-- Run you application: `ionic emulate ios`
+- Run you application: 
+
+  - Mac OSX /iOS platform: `ionic emulate ios`
+  - Android platform: `adb devices && ionic platform add android && ionic run android`
