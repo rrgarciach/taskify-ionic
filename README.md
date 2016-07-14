@@ -3,7 +3,7 @@ A TODO App developed with Ionic v1
 
 ## Installation:
 
-- Clone this repo: `git clone https://github.com/rrgarciach/taskify-ionic1`
+- Clone this repo: `git clone https://github.com/rrgarciach/taskify-ionic`
 
 - Install NPM global dependencies: `npm i -g ionic`
 
