@@ -1,5 +1,5 @@
 // Setup the filter
-angular.module('starter.filters', [])
+angular.module('app.filters', [])
   .filter('pesosCurrency', function() {
 
   return function(input) {
