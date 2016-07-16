@@ -1,5 +1,7 @@
 'use strict';
 
-angular.module('app', ['ionic',
-  'app.filters'
+angular.module('app', [
+  'ionic',
+  'app.filters',
+  'app.taskify'
 ]);

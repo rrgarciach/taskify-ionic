@@ -18,7 +18,7 @@ Retrieve a collection of Tasks
             [
                 {
                     "id": 1, 
-                        "name": "Buy some goreceries"
+                    "name": "Buy some goreceries"
                 },
                 {
                     "id": 2, 
@@ -89,3 +89,4 @@ Delete a single Task by ID
         + id (number)
 
 + Response 204
+

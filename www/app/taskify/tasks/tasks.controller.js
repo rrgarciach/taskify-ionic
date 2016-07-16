@@ -1,10 +1,20 @@
 'use strict';
 
-angular.module('app')
+angular.module('app.taskify')
   .controller('TasksCtrl', TasksCtrl);
 
-function TasksCtrl () {
+function TasksCtrl (taskService) {
   var vm = this;
 
-  vm.hola = 'Hola!X';
+  vm.tasks = [];
+
+  taskService.getTasks()
+    .then(function (response) {
+      vm.tasks = response.data;
+    })
+    .catch(function (err) {
+      console.log(JSON.stringify(err));
+    });
+
+
 }
