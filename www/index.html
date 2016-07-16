@@ -11,6 +11,8 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
+    <!-- inject:css -->
+    <!-- endinject -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -19,13 +21,15 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <!-- inject:js -->
     <script src="app/app.module.js"></script>
     <script src="app/app.routes.js"></script>
     <script src="app/app.run.js"></script>
-    <script src="app/components/menu/menu.controller.js"></script>
     <script src="app/taskify/taskify.module.js"></script>
-    <script src="app/taskify/tasks/tasks.controller.js"></script>
     <script src="app/components/filters/pesoscurrency.filter.js"></script>
+    <script src="app/components/menu/menu.controller.js"></script>
+    <script src="app/taskify/tasks/tasks.controller.js"></script>
+    <!-- endinject -->
   </head>
 
   <body ng-app="app">
