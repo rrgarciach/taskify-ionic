@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.taskify')
+angular.module('app.taskify.tasks')
   .controller('TasksCtrl', TasksCtrl);
 
 function TasksCtrl (taskService) {

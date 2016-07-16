@@ -14,7 +14,7 @@ angular.module('app')
         url: '/tasks',
         views: {
           'menuContent': {
-            templateUrl: 'app/taskify/tasks/tasks.html',
+            templateUrl: 'app/taskify/tasks/list/list.html',
             controller: 'TasksCtrl as vm'
           }
         }
