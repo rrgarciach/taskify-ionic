@@ -7,7 +7,8 @@ function taskService (apiService) {
   var resourceUrl = '/tasks';
 
   return {
-    getAll: getAll
+    getAll: getAll,
+    get: get
   };
 
   function getAll() {

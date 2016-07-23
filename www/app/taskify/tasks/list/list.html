@@ -1,7 +1,7 @@
 <ion-view view-title="My Tasks List">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="task in vm.tasks" href="#/app/tasks/{{vm.task.id}}">
+      <ion-item ng-repeat="task in vm.tasks" ui-sref="app.tasks:view({id: task.id })">
         {{task.name}}
       </ion-item>
     </ion-list>

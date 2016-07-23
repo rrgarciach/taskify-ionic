@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('app.taskify.tasks')
-  .controller('TasksCtrl', TasksCtrl);
+  .controller('TasksListCtrl', TasksListCtrl);
 
-function TasksCtrl($ionicPopup, taskService) {
+function TasksListCtrl($ionicPopup, taskService) {
   var vm = this;
   init();
 
