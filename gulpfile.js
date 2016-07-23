@@ -7,6 +7,7 @@ const minifyCss = require('gulp-minify-css');
 const rename = require('gulp-rename');
 const sh = require('shelljs');
 const inject = require('gulp-inject');
+const babel = require('babel-core');
 
 require('./gulp/drakov');
 
@@ -33,6 +34,7 @@ gulp.task('sass', function (done) {
 
 gulp.task('watch', function () {
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.js, ['babel']);
 });
 
 gulp.task('install', ['git-check'], function () {
@@ -63,6 +65,13 @@ gulp.task('injector', function() {
   return gulp.src('./www/index.html')
     .pipe(inject(gulp.src(paths.css, {read: false}), {relative: true}))
     .pipe(gulp.dest('./www'))
-    .pipe(inject(gulp.src(paths.javascript, {read: false}), {relative: true}))
-    .pipe(gulp.dest('./www'));
+    // .pipe(inject(gulp.src(paths.javascript, {read: false}), {relative: true}))
+    // .pipe(gulp.dest('./www'));
+});
+
+gulp.task('babel', function (done) {
+  gulp.src(paths.javascript)
+    .pipe(babel())
+    .pipe(gulp.dest('./www'))
+    .on('end', done);
 });
