@@ -3,18 +3,27 @@
 angular.module('app.taskify.tasks')
   .controller('TasksCtrl', TasksCtrl);
 
-function TasksCtrl (taskService) {
+function TasksCtrl($ionicPopup, taskService) {
   var vm = this;
+  init();
 
-  vm.tasks = [];
-
-  taskService.getTasks()
-    .then(function (response) {
-      vm.tasks = response.data;
-    })
-    .catch(function (err) {
-      console.log(JSON.stringify(err));
+  function showAlert() {
+    $ionicPopup.alert({
+      title: 'Ups!',
+      template: 'Something gone wrong with the server. Please try again later.'
     });
+  }
 
+  function init() {
+    vm.tasks = [];
+
+    taskService.getAll()
+      .then(function (response) {
+        vm.tasks = response.data;
+      })
+      .catch(function (err) {
+        showAlert();
+      });
+  }
 
 }

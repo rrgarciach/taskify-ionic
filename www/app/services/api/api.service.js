@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.taskify.services')
+angular.module('app.services')
   .service('apiService', apiService);
 
 function apiService ($http) {
