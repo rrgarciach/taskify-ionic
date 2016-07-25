@@ -10,15 +10,5 @@ angular.module('app')
         controller: 'MenuCtrl'
       })
 
-      .state('app.taskify', {
-        url: '/tasks',
-        views: {
-          'menuContent': {
-            templateUrl: 'app/taskify/tasks/list/list.html',
-            controller: 'TasksCtrl as vm'
-          }
-        }
-      });
-
     $urlRouterProvider.otherwise('/app/tasks');
   });

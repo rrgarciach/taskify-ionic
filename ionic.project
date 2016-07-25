@@ -1,0 +1,5 @@
+{
+  "name": "taskify-ionic",
+  "app_id": "",
+  "gulpStartupTasks": ["sass", "injector", "watch"]
+}
